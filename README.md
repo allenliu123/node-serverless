@@ -1,8 +1,7 @@
 # node-serverless
 node实现serverless
 
-user table
-
+TABLE user
 | id  | username | gender |
 | --- | --- | --- |
 | 1  | allen  | male |
