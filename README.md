@@ -2,18 +2,21 @@
 node实现serverless
 
 TABLE student
+
 | s_id | s_name | gender |
 | --- | --- | --- |
 | 1001 | 小明 | 男 |
 | 1002 | 小红 | 女 |
 
 TABLE course
+
 | c_id | c_name |
 | --- | --- |
 | 1 | 计算机基础 |
 | 2 | 数据库原理 |
 
 TABLE choose
+
 | id | s_id | c_id |
 | --- | --- | --- |
 | 1 | 1001 | 1 |
