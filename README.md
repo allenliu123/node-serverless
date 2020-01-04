@@ -23,13 +23,13 @@ TABLE choose
 | 2 | 1002 | 2 |
 
 
-[x] get /user 表示查询 student 表的所有数据
+get /user 表示查询 student 表的所有数据
 (select * from `user`)
 
-[x] get /user?s_id=123 表示查询一条数据
+get /user?s_id=123 表示查询一条数据
 (select * from user where id = ${id})
 
-[x] post /user 表示添加一条数据
+post /user 表示添加一条数据
 data: {
   sId: 1001,
   sName: '123',
@@ -37,7 +37,7 @@ data: {
 }
 (insert into `user` (`s_id`, `s_name`, `gender`) values (${data.sId}, ${data.sName}, ${data.gender}))
 
-[x] put /user
+put /user
 data: {
   sId: 1001,
   sName: '123',
@@ -45,5 +45,5 @@ data: {
 }
 (update `user` set `s_id`=${data.sId}, `s_name`=${data.sName}, `gender`=${data.gender})
 
-[x] delete /user/:id
+delete /user/:id
 (delete from `user` where `s_id`=${id})
