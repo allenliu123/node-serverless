@@ -2,22 +2,22 @@
 node实现serverless
 
 TABLE student
-| s_id  | s_name | gender |
+| s_id | s_name | gender |
 | --- | --- | --- |
-| 1001  | 小明  | 男 |
-| 1002  | 小红  | 女 |
+| 1001 | 小明 | 男 |
+| 1002 | 小红 | 女 |
 
 TABLE course
-| c_id  | c_name |
+| c_id | c_name |
 | --- | --- |
-| 1  | 计算机基础  |
-| 2  | 数据库原理  |
+| 1 | 计算机基础 |
+| 2 | 数据库原理 |
 
 TABLE choose
-| id  | s_id | c_id |
+| id | s_id | c_id |
 | --- | --- | --- |
-| 1  | 1001  | 1 |
-| 2  | 1002  | 2 |
+| 1 | 1001 | 1 |
+| 2 | 1002 | 2 |
 
 
 [x] get /user 表示查询 student 表的所有数据
