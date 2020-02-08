@@ -54,7 +54,7 @@ data: {
 }  
 update \`user\` set \`s_id\`=${data.sId}, \`s_name\`=${data.sName}, \`gender\`=${data.gender})
 
-1. delete /ns/student/:id
+1. delete /ns/student/:id  
 (delete from \`user\` where \`s_id\`=${id})
 
 ## Todo
