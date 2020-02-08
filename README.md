@@ -29,13 +29,16 @@ TABLE choose
 | 2 | 1002 | 2 |
 
 ## Usage
-get /ns/student 表示查询 student 表的所有数据
+1. get /ns/student
+表示查询 student 表的所有数据
 (select * from \`user\`)
 
-get /ns/student?s_id=123 表示查询一条数据
+1. get /ns/student?s_id=123
+表示查询一条数据
 (select * from student where id = $s_id})
 
-post /ns/student 表示添加一条数据
+1. post /ns/student
+表示添加一条数据
 data: {
   sId: 1001,
   sName: '123',
@@ -43,7 +46,7 @@ data: {
 }
 (insert into \`user\` (\`s_id\`, \`s_name\`, \`gender\`) values (${data.sId}, ${data.sName}, ${data.gender}))
 
-put /ns/student
+1. put /ns/student
 data: {
   sId: 1001,
   sName: '123',
@@ -51,9 +54,8 @@ data: {
 }
 update \`user\` set \`s_id\`=${data.sId}, \`s_name\`=${data.sName}, \`gender\`=${data.gender})
 
-delete /ns/student/:id
+1. delete /ns/student/:id
 (delete from \`user\` where \`s_id\`=${id})
-
 
 ## Todo
 - [x] get 请求
