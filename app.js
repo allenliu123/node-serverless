@@ -9,8 +9,8 @@ var app = express()
 
 // var dbs = require('./dbs/user')
 
-var createTable = require('./utils/createTable')
-
+// 重新建表
+// var createTable = require('./utils/createTable')
 // createTable()
 
 // 解析post请求数据

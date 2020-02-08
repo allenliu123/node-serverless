@@ -31,16 +31,6 @@ router.get(/.*/, (req, res) => {
       res.json(response(200, null, results))
     }
   })
-  // if(tableName in tables) {
-  //   mysql.query(`select * from ${tableName}`, (err, results) => {
-  //     if(!err) {
-  //       res.json(response(200, null, results))
-  //     }
-  //   })
-  // } else {
-  //   res.json(response(-1, `${tableName} 表不存在`, null))
-  //   res.end()
-  // }
 })
 
 function checkTables(tableName) {
@@ -65,11 +55,12 @@ function generateSql(tableName, params) {
   if(JSON.stringify(params) == '{}') {
     return `select * from ${tableName}`
   }
-  let str = 'where'
+  let lst = []
   for(var param in params) {
-    str += ` ${param} = ${params[param]}`
+    lst.push(`${param}='${params[param]}'`)
   }
-  let sql = `select * from ${tableName} ${str}`
+  
+  let sql = `select * from ${tableName} where ${lst.join(' and ')}`
   console.log(sql)
   return sql
 }

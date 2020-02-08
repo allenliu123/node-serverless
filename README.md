@@ -1,5 +1,11 @@
-# node-serverless
-node实现serverless
+## State
+
+`Developing`
+
+## Introduction
+使用 NodeJs 实现 Serverless
+
+## Create tables
 
 TABLE student
 
@@ -22,28 +28,36 @@ TABLE choose
 | 1 | 1001 | 1 |
 | 2 | 1002 | 2 |
 
+## Usage
+get /ns/student 表示查询 student 表的所有数据
+(select * from \`user\`)
 
-get /user 表示查询 student 表的所有数据
-(select * from `user`)
+get /ns/student?s_id=123 表示查询一条数据
+(select * from student where id = $s_id})
 
-get /user?s_id=123 表示查询一条数据
-(select * from user where id = ${id})
-
-post /user 表示添加一条数据
+post /ns/student 表示添加一条数据
 data: {
   sId: 1001,
   sName: '123',
   gender: '男'
 }
-(insert into `user` (`s_id`, `s_name`, `gender`) values (${data.sId}, ${data.sName}, ${data.gender}))
+(insert into \`user\` (\`s_id\`, \`s_name\`, \`gender\`) values (${data.sId}, ${data.sName}, ${data.gender}))
 
-put /user
+put /ns/student
 data: {
   sId: 1001,
   sName: '123',
   gender: '男'
 }
-(update `user` set `s_id`=${data.sId}, `s_name`=${data.sName}, `gender`=${data.gender})
+update \`user\` set \`s_id\`=${data.sId}, \`s_name\`=${data.sName}, \`gender\`=${data.gender})
 
-delete /user/:id
-(delete from `user` where `s_id`=${id})
+delete /ns/student/:id
+(delete from \`user\` where \`s_id\`=${id})
+
+
+## Todo
+- [x] get 请求
+- [ ] post 请求
+- [ ] put 请求
+- [ ] delete 请求
+- [ ] 多表查询
