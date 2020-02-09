@@ -59,7 +59,8 @@ update \`user\` set \`s_id\`=${data.sId}, \`s_name\`=${data.sName}, \`gender\`=$
 
 ## Todo
 - [x] get 请求
-- [ ] post 请求
-- [ ] put 请求
+- [x] post 请求
+- [x] put 请求
 - [ ] delete 请求
 - [ ] 多表查询
+- [ ] 权限控制
